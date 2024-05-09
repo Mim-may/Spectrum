@@ -282,7 +282,7 @@ public class Q1_Screen extends JFrame {
         ActionListener buttonActionListener = e -> {
             B_Button sourceButton = (B_Button) e.getSource();
             // Deselect all buttons
-            for (B_Button button : group.getButtons()) {
+            for (B_Button button : group1.getButtons()) {
                 if (button != sourceButton) {
                     button.setSelected(false);
                 }
