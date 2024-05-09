@@ -272,15 +272,34 @@ public class Q1_Screen extends JFrame {
         
         B_Button nb = new B_Button("",Image_Paths.s_disagree,110,105,(110-20),(105-20));
         nb.setBounds(23, 136, 110, 105);
-       
-        nb.addActionListener(new ActionListener() {
-        	public void actionPerformed(ActionEvent e) {
-        	}
-        });
         nb.setFocusable(false);
         nb.setContentAreaFilled(false);
         nb.setOpaque(false);
         nb.setBorderPainted(false);
+
+
+     ButtonGroup group1 = new ButtonGroup();
+        ActionListener buttonActionListener = e -> {
+            B_Button sourceButton = (B_Button) e.getSource();
+            // Deselect all buttons
+            for (B_Button button : group.getButtons()) {
+                if (button != sourceButton) {
+                    button.setSelected(false);
+                }
+            }
+        };
+        nb.addActionListener(buttonActionListener);
+        nb1.addActionListener(buttonActionListener);
+        nb2.addActionListener(buttonActionListener);
+        nb3.addActionListener(buttonActionListener);
+        nb4.addActionListener(buttonActionListener);
+
+        // Add buttons to the button group
+        group1.add(nb);
+        group1.add(nb1);
+        group1.add(nb2);
+	group1.add(nb3);
+        group1.add(nb4);
         
 
         
