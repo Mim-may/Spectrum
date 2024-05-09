@@ -13,6 +13,7 @@ public class B_Button extends JButton {
 	String path1;
 	String path2;
 	private boolean over;
+	private boolean selected = false;
 	private boolean toggle = false;
 	public B_Button(String path1_,String path2_, int w, int h, int dw, int dh) {
 		 {
@@ -80,6 +81,9 @@ public class B_Button extends JButton {
 	     		}
 	     		 @Override
 	     		public void mouseClicked(MouseEvent e) {
+	     			 if (!selected) {
+	     				 setSelected(true);
+	     			 }
 	     			toggleIcon();
 	     		}
 
@@ -102,6 +106,18 @@ public class B_Button extends JButton {
 	}
 
 	}
+	 public void setSelected(boolean selected) {
+	        this.selected = selected;
+	        if (selected) {
+	        	ImageIcon icon6 = new ImageIcon(path2);
+     	        Image im6 = icon6.getImage(); // transform it
+     	        Image newimage4 = im6.getScaledInstance(width , height ,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
+     	        icon6= new ImageIcon(newimage4);
+     	        setIcon(icon6);
+	        } else {
+	            setIcon(null);
+	        }
+	    }
 
 }
 
