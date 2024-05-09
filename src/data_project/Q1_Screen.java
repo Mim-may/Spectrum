@@ -266,6 +266,7 @@ public class Q1_Screen extends JFrame {
         nb21.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		TE welcome = new TE();
+			dispose();
         	}
         });
 
