@@ -1,0 +1,62 @@
+   private void resizeAction(int init_x, int init_y,B_Button button) {
+		   int initialx = init_x;
+		   int initialy = init_y;
+           int frameWidth = getWidth();
+           int frameHeight = getHeight();
+
+           // Get the maximized frame size
+           GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
+           Rectangle bounds = env.getMaximumWindowBounds();
+           int maxWidth = bounds.width;
+           int maxHeight = bounds.height;
+
+           // Calculate the ratio of the current size to the maximized size
+           double widthRatio = (double) frameWidth / maxWidth;
+           double heightRatio = (double) frameHeight / maxHeight;
+
+           // Calculate the new position of the button based on the ratio
+           int buttonX = (int) (initialx * widthRatio);
+           int buttonY = (int) (initialy * heightRatio);
+
+           // Set the new position of the button
+            button.setBounds(buttonX, buttonY, button.getWidth(),button.getHeight());
+
+           // Repaint the content pane
+           contentPane.repaint();
+		   
+	   }   
+
+// Add the above method inside the class of the frame but OUTSIDE the constructor of the frame
+
+
+
+// Add the below code INSIDE the contructor of the frame class
+
+		  addComponentListener(new ComponentAdapter() {
+	            @Override
+	            public void componentResized(ComponentEvent e) {
+	            	resizeAction(10, 500, nb21);
+	            	resizeAction(1082, 500, nb20);
+	            	resizeAction(714, 133, nb10);
+                   	resizeAction(20, 131, nb);
+	            	resizeAction(141, 142, nb1);
+	            	resizeAction(243, 147, nb2);
+                	resizeAction(337, 138, nb3);
+//	            	resizeAction(714, 133, nb4);
+//	            	resizeAction(714, 133, nb5);
+//	            	resizeAction(714, 133, nb6);
+//	            	resizeAction(714, 133, nb7);
+//	            	resizeAction(714, 133, nb8);
+//	            	resizeAction(714, 133, nb9);
+//	            	resizeAction(714, 133, nb11);
+//	            	resizeAction(714, 133, nb12);
+//	            	resizeAction(714, 133, nb13);
+//	            	resizeAction(714, 133, nb14);
+//	            	resizeAction(714, 133, nb15);
+//	            	resizeAction(714, 133, nb16);
+//	            	resizeAction(714, 133, nb17);
+//	            	resizeAction(714, 133, nb18);
+//	            	resizeAction(714, 133, nb19);
+	            	
+	            }
+	        });
