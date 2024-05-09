@@ -452,4 +452,32 @@ public class Q1_Screen extends JFrame {
 		    System.out.println("Icon scaled successfully");
 		}
 
+	   private void resizeAction(int init_x, int init_y,B_Button button) {
+		   int initialx = init_x;
+		   int initialy = init_y;
+           int frameWidth = getWidth();
+           int frameHeight = getHeight();
+
+           // Get the maximized frame size
+           GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
+           Rectangle bounds = env.getMaximumWindowBounds();
+           int maxWidth = bounds.width;
+           int maxHeight = bounds.height;
+
+           // Calculate the ratio of the current size to the maximized size
+           double widthRatio = (double) frameWidth / maxWidth;
+           double heightRatio = (double) frameHeight / maxHeight;
+
+           // Calculate the new position of the button based on the ratio
+           int buttonX = (int) (initialx * widthRatio);
+           int buttonY = (int) (initialy * heightRatio);
+
+           // Set the new position of the button
+            button.setBounds(buttonX, buttonY, button.getWidth(),button.getHeight());
+
+           // Repaint the content pane
+           contentPane.repaint();
+		   
+	   }  
+
 }
