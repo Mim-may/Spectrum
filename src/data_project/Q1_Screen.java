@@ -279,6 +279,11 @@ public class Q1_Screen extends JFrame {
 
 
      ButtonGroup group1 = new ButtonGroup();
+     ButtonGroup group2 = new ButtonGroup();
+     ButtonGroup group3 = new ButtonGroup();
+     ButtonGroup group4 = new ButtonGroup();
+
+		
         ActionListener buttonActionListener = e -> {
             B_Button sourceButton = (B_Button) e.getSource();
             // Deselect all buttons
@@ -288,11 +293,58 @@ public class Q1_Screen extends JFrame {
                 }
             }
         };
+
+         ActionListener buttonActionListener1 = e -> {
+            B_Button sourceButton = (B_Button) e.getSource();
+            // Deselect all buttons
+            for (B_Button button : group2.getButtons()) {
+                if (button != sourceButton) {
+                    button.setSelected(false);
+                }
+            }
+        };
+
+          ActionListener buttonActionListener2 = e -> {
+            B_Button sourceButton = (B_Button) e.getSource();
+            // Deselect all buttons
+            for (B_Button button : group3.getButtons()) {
+                if (button != sourceButton) {
+                    button.setSelected(false);
+                }
+            }
+        };
+       ActionListener buttonActionListener3 = e -> {
+            B_Button sourceButton = (B_Button) e.getSource();
+            // Deselect all buttons
+            for (B_Button button : group4.getButtons()) {
+                if (button != sourceButton) {
+                    button.setSelected(false);
+                }
+            }
+        };		
         nb.addActionListener(buttonActionListener);
         nb1.addActionListener(buttonActionListener);
         nb2.addActionListener(buttonActionListener);
         nb3.addActionListener(buttonActionListener);
         nb4.addActionListener(buttonActionListener);
+		
+        nb5.addActionListener(buttonActionListener1);
+        nb6.addActionListener(buttonActionListener1);
+	nb7.addActionListener(buttonActionListener1);
+	nb8.addActionListener(buttonActionListener1);
+	nb9.addActionListener(buttonActionListener1);
+		
+	nb10.addActionListener(buttonActionListener2);
+	nb11.addActionListener(buttonActionListener2);
+	nb12.addActionListener(buttonActionListener2);
+	nb13.addActionListener(buttonActionListener2);
+	nb14.addActionListener(buttonActionListener2);
+		
+	nb15.addActionListener(buttonActionListener3);
+	nb16.addActionListener(buttonActionListener3);
+	nb17.addActionListener(buttonActionListener3);
+	nb18.addActionListener(buttonActionListener3);
+	nb19.addActionListener(buttonActionListener3);
 
         // Add buttons to the button group
         group1.add(nb);
@@ -300,6 +352,25 @@ public class Q1_Screen extends JFrame {
         group1.add(nb2);
 	group1.add(nb3);
         group1.add(nb4);
+
+	group2.add(nb5);
+	group2.add(nb6);
+	group2.add(nb7);
+	group2.add(nb8);
+	group2.add(nb9);
+
+	group3.add(nb10);
+	group3.add(nb11);
+	group3.add(nb12);
+	group3.add(nb13);
+	group3.add(nb14);
+
+	group4.add(nb15);
+	group4.add(nb16);
+	group4.add(nb17);
+	group4.add(nb18);
+	group4.add(nb19);
+		
         
 
         
