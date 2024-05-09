@@ -1,0 +1,13 @@
+package data_project;
+
+class ButtonGroup {
+    private java.util.List<B_Button> buttons = new java.util.ArrayList<>();
+
+    public void add(B_Button button) {
+        buttons.add(button);
+    }
+
+    public java.util.List<B_Button> getButtons() {
+        return buttons;
+    }
+}
