@@ -397,7 +397,35 @@ public class Q1_Screen extends JFrame {
 		contentPane.add(nb19);
 		contentPane.add(nb20);
 		contentPane.add(nb21);
-	
+
+		  addComponentListener(new ComponentAdapter() {
+	            @Override
+	            public void componentResized(ComponentEvent e) {
+	            	resizeAction(10, 500, nb21);
+	            	resizeAction(1082, 500, nb20);
+	            	resizeAction(714, 133, nb10);
+                   	resizeAction(20, 131, nb);
+	            	resizeAction(141, 142, nb1);
+	            	resizeAction(243, 147, nb2);
+                	resizeAction(337, 138, nb3);
+//	            	resizeAction(714, 133, nb4);
+//	            	resizeAction(714, 133, nb5);
+//	            	resizeAction(714, 133, nb6);
+//	            	resizeAction(714, 133, nb7);
+//	            	resizeAction(714, 133, nb8);
+//	            	resizeAction(714, 133, nb9);
+//	            	resizeAction(714, 133, nb11);
+//	            	resizeAction(714, 133, nb12);
+//	            	resizeAction(714, 133, nb13);
+//	            	resizeAction(714, 133, nb14);
+//	            	resizeAction(714, 133, nb15);
+//	            	resizeAction(714, 133, nb16);
+//	            	resizeAction(714, 133, nb17);
+//	            	resizeAction(714, 133, nb18);
+//	            	resizeAction(714, 133, nb19);
+	            	
+	            }
+	        });
 
 	}
 	
