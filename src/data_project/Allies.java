@@ -75,19 +75,6 @@ public class Allies extends JFrame {
 			contentPane.add(nb20);
 			
 	}
-	
-	public void scaleImage(JLabel label, String path, int width, int height) {
-		ImageIcon icon = new ImageIcon(path);
-		Image img = icon.getImage();
-		 BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
-	        Graphics2D g2d = bufferedImage.createGraphics();
-	        g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
-	        g2d.drawImage(img, 0, 0, width, height, null);
-	        g2d.dispose();
-//		Image imgScale = img.getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon scaledIcon = new ImageIcon(bufferedImage);
-		label.setIcon(scaledIcon);
-	}
 	   public void resizeIcon(JButton button,String path, int width, int height) {
 		    ImageIcon icon = new ImageIcon(path);
 	        Image image = icon.getImage();
