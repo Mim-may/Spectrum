@@ -18,12 +18,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class Gamble2 extends First_Result {
+public class Harmonic1 extends First_Result {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Gamble2 frame = new Gamble2();
+					Harmonic1 frame = new Harmonic1();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,8 +35,8 @@ public class Gamble2 extends First_Result {
 	/**
 	 * Create the frame.
 	 */
-	public Gamble2() {
-		super(Image_Paths.g2,Pals.class);
+	public Harmonic1() {
+		super(Image_Paths.harmonic1, Kalimba.class);
 	    }
 
 }
